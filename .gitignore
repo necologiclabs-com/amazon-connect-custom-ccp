@@ -1,3 +1,49 @@
-*/node_modules
-*/build
-*/cdk.out
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Build outputs
+build/
+*/build/
+dist/
+*/dist/
+
+# CDK
+cdk.out/
+*/cdk.out/
+cdk.context.json
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Claude Code
+.claude/settings.local.json
