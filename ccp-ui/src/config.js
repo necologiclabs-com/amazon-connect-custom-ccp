@@ -17,9 +17,9 @@
 */
 
 
-let connectName = "<CONNECT_NAME>";
-let apiGatewayID = "<API_GATEWAY_ID>";
-let cfDistributionUrl = "<CF_DISTRIBUTION_URL>";
+let connectName = "neco-test01";
+let apiGatewayID = "mpcztvi9h7";
+let cfDistributionUrl = "https://d17i8yy4p5hzqq.cloudfront.net";
 
 
 // set default values for dev
@@ -27,7 +27,7 @@ export const CONNECT_NAME = connectName.includes("<") ? "company-name-connect-de
 export const API_GATEWAY_ID = apiGatewayID.includes("<") ? "<<API_GATEWAY_ID>>" : apiGatewayID;
 export const CF_DISTRIBUTION_URL = cfDistributionUrl.includes("<") ? "<<CF_DISTRIBUTION_URL>>" : cfDistributionUrl;
 
-export const API_HOST = `https://${API_GATEWAY_ID}.execute-api.us-west-2.amazonaws.com/prod`;
+export const API_HOST = `https://${API_GATEWAY_ID}.execute-api.ap-northeast-1.amazonaws.com/prod`;
 export const POST_CALL_INTENT_URL = `${API_HOST}/postNewCallIntent`;
 export const buildIntentsForAgentURL = (agentName) => {
   return `${API_HOST}/getIntentsForAgent?agentName=${agentName}`

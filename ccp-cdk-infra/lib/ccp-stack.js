@@ -152,7 +152,7 @@ class ccpStack extends cdk.Stack {
 
     allLambdas.forEach((lambdaFunction) => {
       allLambdasObj[lambdaFunction] = new lambda.Function(this, lambdaFunction, {
-        runtime: lambda.Runtime.NODEJS_14_X,
+        runtime: new lambda.Runtime('nodejs18.x', lambda.RuntimeFamily.NODEJS, { supportsInlineCode: true }),
         functionName: lambdaFunction,
         handler: "index.handler",
         code: new lambda.AssetCode(path.join(lambdaDirectory, lambdaFunction)),
